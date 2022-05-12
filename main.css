@@ -1,0 +1,6 @@
+#letterBord{
+    border: 1px solid #000;
+    font-size: 60px;
+    display: flex;
+    padding: 20px;
+}
