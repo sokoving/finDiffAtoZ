@@ -14,14 +14,12 @@
 
 #letterBord div{
     margin: 10px;
-    /* border: 1px solid #000; */
+    border: 1px solid #000;
 }
 #letterBord div:nth-child(3n+1){
-    flex: 1 0 30%;
     text-align: right;
 }
 #letterBord div:nth-child(3n){
-    flex: 1 0 30%;
     text-align: left;
 }
 
