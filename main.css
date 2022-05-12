@@ -46,6 +46,46 @@ section{
     flex-flow: wrap row;
     justify-content: center;
 }
+
+
+/*section - colorBtn*/
+#colorBtn{
+    /* background: yellow; */
+    width: 50px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+
+}
+#colorBtn button{
+    font-size: 30px;
+    cursor: pointer;
+
+    margin: 7px 7px 0 0;
+    border: none;
+    border-radius: 2px;
+    /* box-shadow: 3px 3px 3px gray; */
+}
+#colorBtn .whiteBtn{
+    background: white;
+    color: black;
+}
+#colorBtn .blackBtn{
+    background: black;
+    color: skyblue;
+}
+#colorBtn .greenBtn{
+    background: green;
+    color: yellow;
+}
+#colorBtn .purpleBtn{
+    background: purple;
+    color: white;
+}
+
+
+
 /* section - gamebord */
 #gamebord {
     /* border: 1px solid #000; */
@@ -73,6 +113,11 @@ section{
     margin: 10px;
 }
 
+#startBtn{
+    position: absolute;
+    left: 10%;
+}
+
 
 /* section - nav */
 nav {
@@ -88,38 +133,7 @@ nav {
 /* nav - clock */
 #clock {
     /* background: gray; */
-}
-
-/* nav - colorBtn*/
-#colorBtn{
-    /* background: yellow; */
-    display: flex;
-    flex-flow: wrap;
-}
-#colorBtn button{
-    font-size: 30px;
-    cursor: pointer;
-
-    margin: 7px 7px 0 0;
-    border: none;
-    border-radius: 2px;
-    box-shadow: 3px 3px 3px gray;
-}
-#colorBtn .whiteBtn{
-    background: white;
-    color: black;
-}
-#colorBtn .blackBtn{
-    background: black;
-    color: skyblue;
-}
-#colorBtn .greenBtn{
-    background: green;
-    color: yellow;
-}
-#colorBtn .purpleBtn{
-    background: purple;
-    color: white;
+    font-size: 1.3em
 }
 
 /* nav - checkboxBtn */
@@ -129,3 +143,8 @@ nav {
     display: flex;
     flex-flow: column wrap;
 }
+
+
+
+/* 색 바꾸기 보드 */
+/* sliver */
