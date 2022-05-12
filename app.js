@@ -35,55 +35,60 @@ function removeAllChild($parentNode) {
     }
 }
 
-// 레벨(id)별 게임 판 까는 함수
-function newGame() {
+
+ //글자 9개 깔기 함수
+ function gameBord(maxNum, idxNum) {
     const $letterBord = document.getElementById('letterBord');
 
-    //가상의 태그
-    const $virtual = document.createDocumentFragment();
-    //gameDataIndex
-    const $answer1 = gameData[0].answerLetter
-    const $question1 = gameData[0].questionLetter
-    const $randomNum = Math.floor(Math.random() * 9) + 1;
-    //글자 9개 깔기
-    for (let i = 1; i <= 9; i++) {
-        
-        const $newDiv = document.createElement('div');
-        $newDiv.textContent = $question1;
-        if (i === $randomNum) {
-            $newDiv.textContent = $answer1;
-            $newDiv.classList.add('clickHere')
-            const target = i;
-        }
+        //gameDataIndex
+    const $answer0 = gameData[idxNum].answerLetter;
+    const $question0 = gameData[idxNum].questionLetter;
+    const $randomNum = Math.floor(Math.random() * maxNum) + 1;
 
-        $virtual.appendChild($newDiv);
+    for (let i = 0; i < maxNum; i++) {    
+            //가상의 태그
+       const $virtual = document.createDocumentFragment();
+            //가상에 밀어넣을 숫자 div
+       const $newDiv = document.createElement('div');
+       $newDiv.textContent = $question0;
+       if (i === $randomNum) {
+          $newDiv.textContent = $answer0;
+          $newDiv.classList.add('clickHere')
+      }
+      $virtual.appendChild($newDiv);
+      $letterBord.appendChild($virtual);
     }
-    //가상의 태그를 letterBord 자식으로 넣기
-    $letterBord.appendChild($virtual);
+    console.log('게임시작');
+ }
 
-    //정답 태그 
-    const $answereDiv = document.querySelector('.clickHere')
-    // console.log($answereDiv);
 
-    $letterBord.addEventListener('click', function(e){
-        // console.log(e.target);
-        if(e.target.matches('#letterBord > .clickHere')) {
-            alert('정답입니다!');
-            removeAllChild($letterBord);
-            return;
-        }
-    })
+function newGamebord(maxNum){
 
 }
 
 
 
-
 //=============== 메인 코드 실행부분 ===============//
 (function() {
-    //새판 깔기
+    //새판 깔고 정답 맞추기
     const $startBtn = document.getElementById('startBtn');
-    $startBtn.addEventListener('click', newGame)
+    $startBtn.addEventListener('click', function(){
+        //게임 시작 > 글자 깔기
+        gameBord(9, 0);
+
+        // 정답 맞추기
+        const $letterBord = document.getElementById('letterBord')
+        $letterBord.addEventListener('click', e => {
+            if(e.target.matches('#letterBord > .clickHere')){
+                console.log(e.target);
+                if(confirm('정답입니다!\n다음 단계로 가시겠습니까?')) {
+                    removeAllChild($letterBord);
+                    gameBord(9, 1);
+                }
+            }
+        })
+        console.log($letterBord);
+    })
 
     
 
