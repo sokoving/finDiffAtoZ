@@ -18,7 +18,7 @@
 }
 
 /* header */
-h1.title {
+h1.titleH1 {
     /* background: orange; */
     border: 8px double #000;
     background: #fff;
@@ -51,20 +51,24 @@ section{
 /*section - colorBtn*/
 #colorBtn{
     /* background: yellow; */
-    width: 50px;
+    width: 39.99px;
+    margin: 18px 0;
 
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
 }
 #colorBtn button{
-    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    font-size: 29px;
+    text-align: center;
     cursor: pointer;
 
-    margin: 7px 7px 0 0;
+    margin: 7px 0;
     border: none;
-    border-radius: 2px;
+    border-radius: 50%;
     /* box-shadow: 3px 3px 3px gray; */
 }
 #colorBtn .whiteBtn{
@@ -93,14 +97,13 @@ section{
 }
 
 #letterBord{
-    /* border: 3px solid #000; */
+    border: 1px solid #000;
     /* background: pink; */
-    color: #000;
 
     width: 350px;
     height: 350px;
     font-size: 80px;
-    margin: 0 auto;
+    margin: 0 20px;
 
     display: flex;
     flex-flow: row wrap;
@@ -124,6 +127,7 @@ nav {
     /* border: 1px solid #000; */
     /* background: yellow; */
     width: 100px;
+    margin: 25px 0;
 
     display: flex;
     flex-flow: column wrap;
@@ -146,5 +150,15 @@ nav {
 
 
 
-/* 색 바꾸기 보드 */
-/* sliver */
+/* 색 바꾸기 모드 */
+/* sliverMode */
+body.sliverMode{
+    background: #767676;
+    color: #615F62;
+}
+h1.titleH1.sliverMode{
+    background: #AFAFB0;
+}
+section.sliverMode{
+    background: #AFAFB0;
+}
