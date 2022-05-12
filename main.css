@@ -1,6 +1,30 @@
+header{
+    background: pink;
+}
+
+/* gamebord */
 #letterBord{
     border: 1px solid #000;
     font-size: 60px;
-    display: flex;
     padding: 20px;
+    margin: 20px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
 }
+
+#letterBord div{
+    margin: 10px;
+    /* border: 1px solid #000; */
+}
+#letterBord div:nth-child(3n+1){
+    flex: 1 0 30%;
+    text-align: right;
+}
+#letterBord div:nth-child(3n){
+    flex: 1 0 30%;
+    text-align: left;
+}
+
