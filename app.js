@@ -62,7 +62,7 @@ function newGame() {
     //새판 깔기
     const $startBtn = document.getElementById('startBtn');
     $startBtn.addEventListener('click', newGame)
-
+    
     //정답 클릭
     const $answer1 = gameData[0].answerLetter
 
