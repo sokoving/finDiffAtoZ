@@ -5,3 +5,25 @@
 5. 다음판
 6. 글자 9개가 나온다(gameData.id.2)
 
+
+// while(true){
+//     if('게임시작'){
+//         newGame(gameData);
+//     } else if ('정답'){
+//         for ( let i = 2; i <= gameData.length; i++){
+//             newGame();
+//         }
+//         break;
+//     } else if ('10초가 지나면')
+//     setTimeout(againGame, 10000);
+// }
+
+
+
+// function timer (){
+//     console.log('5초!');
+// }
+
+// const $clock = document.getElementById('clock');
+
+// serInterval(timer(), 5000)

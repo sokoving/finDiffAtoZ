@@ -2,27 +2,27 @@
 const gameData = [
     {
         id: 1,
-        answerLetter: '웃1',
+        answerLetter: 'O',
         questionLetter: '홋1'
     },
     {
         id: 2,
-        answerLetter: '웃2',
+        answerLetter: 'O',
         questionLetter: '홋2'
     },
     {
         id: 3,
-        answerLetter: '웃3',
+        answerLetter: 'O',
         questionLetter: '홋3'
     },
     {
         id: 4,
-        answerLetter: '웃4',
+        answerLetter: 'O',
         questionLetter: '홋4'
     },
     {
         id: 5,
-        answerLetter: '웃5',
+        answerLetter: 'O',
         questionLetter: '홋5'
     }
 ];
@@ -41,30 +41,28 @@ function removeAllChild($parentNode) {
     const $letterBord = document.getElementById('letterBord');
 
         //gameDataIndex
-    const $answer0 = gameData[idxNum].answerLetter;
-    const $question0 = gameData[idxNum].questionLetter;
+    const $answer = gameData[idxNum].answerLetter;
+    const $question = gameData[idxNum].questionLetter;
     const $randomNum = Math.floor(Math.random() * maxNum) + 1;
+    const $virtual = document.createDocumentFragment();
 
-    for (let i = 0; i < maxNum; i++) {    
+    for (let i = 1; i <= maxNum; i++) { 
+        console.log(`i: ${i}, random: ${$randomNum}`);
             //가상의 태그
-       const $virtual = document.createDocumentFragment();
             //가상에 밀어넣을 숫자 div
-       const $newDiv = document.createElement('div');
-       $newDiv.textContent = $question0;
+        const $newDiv = document.createElement('div');
        if (i === $randomNum) {
-          $newDiv.textContent = $answer0;
+          $newDiv.textContent = $answer;
           $newDiv.classList.add('clickHere')
+          console.log(`answer i: ${i}`);
+      } else if ( i !== $randomNum){
+         $newDiv.textContent = $question;
       }
       $virtual.appendChild($newDiv);
       $letterBord.appendChild($virtual);
     }
-    console.log('게임시작');
+    console.log('-------');
  }
-
-
-function newGamebord(maxNum){
-
-}
 
 
 
@@ -72,46 +70,25 @@ function newGamebord(maxNum){
 (function() {
     //새판 깔고 정답 맞추기
     const $startBtn = document.getElementById('startBtn');
-    $startBtn.addEventListener('click', function(){
-        //게임 시작 > 글자 깔기
-        gameBord(9, 0);
 
-        // 정답 맞추기
-        const $letterBord = document.getElementById('letterBord')
+    let idx = 1;
+    $startBtn.addEventListener('click', function(){
+
+        // id1 판 깔기
+        gameBord(9, 0);
+            // 정답 맞추기
+        const $letterBord = document.getElementById('letterBord');
         $letterBord.addEventListener('click', e => {
             if(e.target.matches('#letterBord > .clickHere')){
-                console.log(e.target);
-                if(confirm('정답입니다!\n다음 단계로 가시겠습니까?')) {
+                if (idx === 5){
                     removeAllChild($letterBord);
-                    gameBord(9, 1);
+                    alert('1~5판 종료');
+                    return;
                 }
-            }
-        })
-        console.log($letterBord);
-    })
-
-    
-
-})()
-
-// while(true){
-//     if('게임시작'){
-//         newGame(gameData);
-//     } else if ('정답'){
-//         for ( let i = 2; i <= gameData.length; i++){
-//             newGame();
-//         }
-//         break;
-//     } else if ('10초가 지나면')
-//     setTimeout(againGame, 10000);
-// }
-
-
-
-// function timer (){
-//     console.log('5초!');
-// }
-
-// const $clock = document.getElementById('clock');
-
-// serInterval(timer(), 5000)
+                confirm('정답입니다!\n다음 단계로 가시겠습니까?');
+                removeAllChild($letterBord);
+                gameBord(9, idx++);
+            } //end if(e.target.matches
+        }) // end $letterBord.addEventListener
+    }) //end $startBtn.addEventListener    
+})() // end 전체 익명함수
