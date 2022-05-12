@@ -3,28 +3,28 @@
 const gameData = [
     {
         id: 1,
-        answerLetter: 'O1',
-        questionLetter: '홋1'
+        answerLetter: '11',
+        questionLetter: '홋'
     },
     {
         id: 2,
-        answerLetter: 'O2',
-        questionLetter: '홋2'
+        answerLetter: '22',
+        questionLetter: '홋'
     },
     {
         id: 3,
-        answerLetter: 'O3',
-        questionLetter: '홋3'
+        answerLetter: '33',
+        questionLetter: '홋'
     },
     {
         id: 4,
-        answerLetter: 'O4',
-        questionLetter: '홋4'
+        answerLetter: '44',
+        questionLetter: '홋'
     },
     {
         id: 5,
-        answerLetter: 'O5',
-        questionLetter: '홋5'
+        answerLetter: '55',
+        questionLetter: '홋'
     }
 ];
 

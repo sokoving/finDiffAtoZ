@@ -1,76 +1,131 @@
+/* common */
+.hide{
+    display: none;
+}
+
 /* wrapper */
 .wrapper {
-    background: skyblue;
-    height: 100vh;
+    /* background: pink; */
     width: 70%;
-    margin: 0 auto;
+    min-width: 650px;
+    font-size: 25px;
+    font-family: 'NanumSquareRound', sans-serif;
+
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%)
 }
 
 /* header */
-h1 {
+h1.title {
+    /* background: orange; */
+    border: 8px double #000;
+    background: #fff;
+
     width: 100%;
-    height: 70px;
-    background: orange;
-    font-size: 40px;
+    padding: 50px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+
+    font-size: 80px;
+    font-weight: bold;
     text-align: center;
 }
 
-/* nav */
-/* 배경, 글씨 색 버튼 */
-header .colorBtn{
-    font-size: 20px;
-    font-weight: 700;
-    cursor: pointer;
 
-    border: none;
-    border-radius: 2px;
-    box-shadow: 1px 1px 1px;
-}
+/* section */
+section{
+    border: 8px double #000;
+    background: #fff;
 
-.colorBtn.whiteBtn{
-    background: white;
-    color: black;
+    padding: 50px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
 }
-.colorBtn.blackBtn{
-    background: black;
-    color: skyblue;
-}
-.colorBtn.greenBtn{
-    background: green;
-    color: yellow;
-}
-.colorBtn.purpleBtn{
-    background: purple;
-    color: white;
+/* section - gamebord */
+#gamebord {
+    /* border: 1px solid #000; */
+    /* background: pink; */
 }
 
-/* gamebord */
 #letterBord{
-    background: green;
-    color: yellow;
-    border: 1px solid #000;
+    /* border: 3px solid #000; */
+    /* background: pink; */
+    color: #000;
+
     width: 350px;
-    
-    
-    font-size: 60px;
-    padding: 20px;
+    height: 350px;
+    font-size: 80px;
     margin: 0 auto;
 
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
 #letterBord div{
     margin: 10px;
-    border: 1px solid #000;
-}
-#letterBord div:nth-child(3n+1){
-    text-align: right;
-}
-#letterBord div:nth-child(3n){
-    text-align: left;
 }
 
 
+/* section - nav */
+nav {
+    /* border: 1px solid #000; */
+    /* background: yellow; */
+    width: 100px;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+/* nav - clock */
+#clock {
+    /* background: gray; */
+}
+
+/* nav - colorBtn*/
+#colorBtn{
+    /* background: yellow; */
+    display: flex;
+    flex-flow: wrap;
+}
+#colorBtn button{
+    font-size: 30px;
+    cursor: pointer;
+
+    margin: 7px 7px 0 0;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 3px 3px 3px gray;
+}
+#colorBtn .whiteBtn{
+    background: white;
+    color: black;
+}
+#colorBtn .blackBtn{
+    background: black;
+    color: skyblue;
+}
+#colorBtn .greenBtn{
+    background: green;
+    color: yellow;
+}
+#colorBtn .purpleBtn{
+    background: purple;
+    color: white;
+}
+
+/* nav - checkboxBtn */
+#checkboxBtn{
+    /* background: tomato; */
+
+    display: flex;
+    flex-flow: column wrap;
+}
