@@ -1,10 +1,60 @@
+/* wrapper */
+.wrapper {
+    background: skyblue;
+    height: 100vh;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* header */
+h1 {
+    width: 100%;
+    height: 70px;
+    background: orange;
+    font-size: 40px;
+    text-align: center;
+}
+
+/* nav */
+/* 배경, 글씨 색 버튼 */
+header .colorBtn{
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+
+    border: none;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px;
+}
+
+.colorBtn.whiteBtn{
+    background: white;
+    color: black;
+}
+.colorBtn.blackBtn{
+    background: black;
+    color: skyblue;
+}
+.colorBtn.greenBtn{
+    background: green;
+    color: yellow;
+}
+.colorBtn.purpleBtn{
+    background: purple;
+    color: white;
+}
 
 /* gamebord */
 #letterBord{
+    background: green;
+    color: yellow;
     border: 1px solid #000;
+    width: 350px;
+    
+    
     font-size: 60px;
     padding: 20px;
-    margin: 20px;
+    margin: 0 auto;
 
     display: flex;
     flex-flow: row wrap;
@@ -22,4 +72,5 @@
 #letterBord div:nth-child(3n){
     text-align: left;
 }
+
 

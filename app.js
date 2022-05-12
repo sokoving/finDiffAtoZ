@@ -1,3 +1,4 @@
+
 //=============== 전역변수, 함수 정의부분 =============//
 const gameData = [
     {
@@ -88,7 +89,15 @@ function removeAllChild($parentNode) {
                 confirm('정답입니다!\n다음 단계로 가시겠습니까?');
                 removeAllChild($letterBord);
                 gameBord(9, idx++);
-            } //end if(e.target.matches
+            }
+            //end if(e.target.matches
         }) // end $letterBord.addEventListener
-    }) //end $startBtn.addEventListener    
+    }) //end $startBtn.addEventListener   
+
+    // //시간 잴 함수
+    // let time = 0;
+    // const timer = setInterval(function(){
+    //     time++;
+    //     console.log(timer);
+    // } ,1000)
 })() // end 전체 익명함수
