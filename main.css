@@ -3,6 +3,7 @@
     display: none;
 }
 
+
 /* wrapper */
 .wrapper {
     /* background: pink; */
@@ -91,17 +92,22 @@ section{
 
 
 /* section - gamebord */
-#gamebord {
-    /* border: 1px solid #000; */
-    /* background: pink; */
+#gamebord { 
+    border: 1px solid #000;
+    background: pink;
+    margin: 0 10px;
+}
+
+
+/* section - explain  >> 작업해야 함 */
+#explain {
+    width: 350px;
+    background: pink;
 }
 
 #letterBord{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     /* background: pink; */
-
-    width: 350px;
-    height: 350px;
     font-size: 80px;
     margin: 0 20px;
 
@@ -111,10 +117,10 @@ section{
     align-items: center;
     text-align: center;
 }
-
+/* 
 #letterBord div{
     margin: 10px;
-}
+} */
 
 #startBtn{
     position: absolute;
@@ -161,4 +167,43 @@ h1.titleH1.sliverMode{
 }
 section.sliverMode{
     background: #AFAFB0;
+}
+
+/* explain 사라지기 */
+#explain.disappear {
+    display: none;
+}
+
+/* letterBord - 난이도별 크기*/
+#letterBord.leve9{
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+}
+#letterBord.leve9 div{
+    font-size: 80px;
+    line-height: 1;
+    margin: 10px;
+}
+
+#letterBord.leve49{
+    width: 450px;
+    height: 450px;
+    padding: 10px;
+}
+#letterBord.leve49 div{
+    font-size: 50px;
+    line-height: 1;
+    margin: 8px;
+}
+
+#letterBord.leve100{
+    width: 550px;
+    height: 550px;
+    padding: 10px;
+}
+#letterBord.leve100 div{
+    font-size: 45px;
+    line-height: 1;
+    margin: 5px;
 }

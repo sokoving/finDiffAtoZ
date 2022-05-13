@@ -115,7 +115,32 @@ gameData [
 3. 모바일 웹 / 태블릿 
 
 
-
-
-
 --------------------------
+
+
+난이도 설정 전 함수
+
+    //새판 깔고 정답 맞추기
+    const $startBtn = document.getElementById('startBtn');
+
+    let idx = 1;
+    $startBtn.addEventListener('click', function(){
+
+        // id1 판 깔기
+        gameBord(9, 0);
+            // 정답 맞추기
+        const $letterBord = document.getElementById('letterBord');
+        $letterBord.addEventListener('click', e => {
+            if(e.target.matches('#letterBord > .clickHere')){
+                if (idx === 5){
+                    removeAllChild($letterBord);
+                    alert('1~5판 종료');
+                    return;
+                }
+                confirm('정답입니다!\n다음 단계로 가시겠습니까?');
+                removeAllChild($letterBord);
+                gameBord(9, idx++);
+            }
+            //end if(e.target.matches
+        }) // end $letterBord.addEventListener
+    }) //end $startBtn.addEventListener  
