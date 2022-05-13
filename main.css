@@ -73,28 +73,12 @@ section{
     border-radius: 50%;
     /* box-shadow: 3px 3px 3px gray; */
 }
-#colorBtn .whiteBtn{
-    background: white;
-    color: black;
-}
-#colorBtn .blackBtn{
-    background: black;
-    color: skyblue;
-}
-#colorBtn .greenBtn{
-    background: green;
-    color: yellow;
-}
-#colorBtn .purpleBtn{
-    background: purple;
-    color: white;
-}
 
 
 
 /* section - gamebord */
 #gamebord { 
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     /* background: pink; */
     margin: 0 10px;
 }
@@ -192,17 +176,88 @@ nav {
 /* -------------- js 적용 CSS ---------------*/
 
 /* 색 바꾸기 모드 */
+/* sliverMode blackMode greenMode purpleMode */
+
 /* sliverMode */
+#colorBtn .silverBtn{
+    background: #7B8174;
+    color: #C9C9C4;
+}
+
 body.sliverMode{
-    background: #767676;
-    color: #615F62;
+    background: #7B8174;
+    color: #000;
 }
 h1.sliverMode{
-    background: gray;
+    background: #C9C9C4;
 }
 section.sliverMode{
-    background: #AFAFB0;
+    background: #C9C9C4;
 }
+section.sliverMode #gamebord{
+    background: #7B8174;
+}
+
+/* 
+1 #949495
+2 #767676
+3 #7B8174
+4 #7A7C7D
+5 #AFAFB0
+6 #A99E93
+7 #CED1D3
+8 #C9C9C4z
+9 #615F62
+*/
+
+/* blackMode */
+#colorBtn .blackBtn{
+    background: #84C0DA;
+    color: #003682;
+}
+
+body.blackMode{
+    background: #7B8174;
+    color: #000;
+}
+h1.blackMode{
+    background: #C9C9C4;
+}
+section.blackMode{
+    background: #C9C9C4;
+}
+section.blackMode #gamebord{
+    background: #7B8174;
+}
+
+/* 
+1 #005EAC
+2 #6F8AA9
+3 #003682
+4 #84C0DA
+5 #D0DEEA
+6 #96B4CE
+7 
+8 
+9 
+*/
+
+
+/* greenMode */
+#colorBtn .greenBtn{
+    background: green;
+    color: yellow;
+}
+
+
+/* purpleMode */
+#colorBtn .purpleBtn{
+    background: purple;
+    color: white;
+}
+
+
+
 
 
 /* explain 사라지기 */
