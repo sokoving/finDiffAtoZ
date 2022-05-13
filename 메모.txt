@@ -144,3 +144,30 @@ gameData [
             //end if(e.target.matches
         }) // end $letterBord.addEventListener
     }) //end $startBtn.addEventListener  
+
+
+    //gameData    {
+        id: 1,
+        answerLetter: '웃',
+        questionLetter: '훗'
+    },
+    {
+        id: 2,
+        answerLetter: '웃',
+        questionLetter: '윳'
+    },
+    {
+        id: 3,
+        answerLetter: '웃',
+        questionLetter: '욧'
+    },
+    {
+        id: 4,
+        answerLetter: '웃',
+        questionLetter: '읏'
+    },
+    {
+        id: 5,
+        answerLetter: '웃',
+        questionLetter: '옷'
+    }

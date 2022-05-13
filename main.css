@@ -175,34 +175,34 @@ section.sliverMode{
 }
 
 /* letterBord - 난이도별 크기*/
-#letterBord.leve9{
+#letterBord.level9{
     width: 300px;
     height: 300px;
     padding: 10px;
 }
-#letterBord.leve9 div{
+#letterBord.level9 div{
     font-size: 80px;
     line-height: 1;
     margin: 10px;
 }
 
-#letterBord.leve49{
+#letterBord.level49{
     width: 450px;
     height: 450px;
     padding: 10px;
 }
-#letterBord.leve49 div{
+#letterBord.level49 div{
     font-size: 50px;
     line-height: 1;
     margin: 8px;
 }
 
-#letterBord.leve100{
+#letterBord.level100{
     width: 550px;
     height: 550px;
     padding: 10px;
 }
-#letterBord.leve100 div{
+#letterBord.level100 div{
     font-size: 45px;
     line-height: 1;
     margin: 5px;
