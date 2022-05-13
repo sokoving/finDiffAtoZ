@@ -166,7 +166,7 @@ section{
 nav {
     /* border: 1px solid #000; */
     /* background: yellow; */
-    width: 100px;
+    width: 130px;
     margin: 25px 0;
 
     display: flex;
@@ -250,4 +250,52 @@ section.sliverMode{
 /* 힌트 보여주기 */
 #letterBord .clickHere.hint{
     font-weight: 700;
+}
+
+
+/* answer letter */
+/* 정답 숨어있는 상태 */
+#answerLetter {
+    display: none;
+    width: 350px;
+    position: relative;
+    font-size: 1.5em;
+}
+
+/* 정답 나오기! */
+#answerLetter.finished {
+    display: flex;
+}
+
+
+/* 정답 글자들 위치 */
+#answerLetter .first {
+    position: absolute;
+    top: 150px;
+    left: 40px;
+}
+#answerLetter .second {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+#answerLetter .third {
+    position: absolute;
+    top: 200px;
+    left: 150px;
+}
+#answerLetter .force {
+    position: absolute;
+    top: 170px;
+    left: 230px;
+}
+#answerLetter .fifth {
+    position: absolute;
+    top: 40px;
+    left: 200px;
+}
+#answerLetter .sixth {
+    position: absolute;
+    top: 80px;
+    left: 280px;
 }
