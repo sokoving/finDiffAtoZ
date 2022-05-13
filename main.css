@@ -18,8 +18,9 @@
     transform: translate(50%, -50%)
 }
 
-/* header */
-h1.titleH1 {
+
+/*header */
+h1.titleH1{
     /* background: orange; */
     border: 8px double #000;
     background: #fff;
@@ -35,7 +36,7 @@ h1.titleH1 {
 }
 
 
-/* section */
+/*section */
 section{
     border: 8px double #000;
     background: #fff;
@@ -94,22 +95,53 @@ section{
 /* section - gamebord */
 #gamebord { 
     border: 1px solid #000;
-    background: pink;
+    /* background: pink; */
     margin: 0 10px;
 }
 
 
-/* section - explain  >> 작업해야 함 */
+/* section - gamebord - explain */
 #explain {
     width: 350px;
-    background: pink;
+    height: 350px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
+#explain .game-story{
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+#explain .level-choise{
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#explain .level-wrap{
+    display: flex;
+    justify-content: center;
+}
+
+#explain .level-wrap div{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+
+    border: 1px dotted #000;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+
+/* section - gamebord - letterBord  */
 #letterBord{
     /* border: 1px solid #000; */
     /* background: pink; */
     font-size: 80px;
-    margin: 0 20px;
+    margin: 20px;
 
     display: flex;
     flex-flow: row wrap;
@@ -157,6 +189,7 @@ nav {
 }
 
 
+/* -------------- js 적용 CSS ---------------*/
 
 /* 색 바꾸기 모드 */
 /* sliverMode */
@@ -164,27 +197,30 @@ body.sliverMode{
     background: #767676;
     color: #615F62;
 }
-h1.titleH1.sliverMode{
-    background: #AFAFB0;
+h1.sliverMode{
+    background: gray;
 }
 section.sliverMode{
     background: #AFAFB0;
 }
+
 
 /* explain 사라지기 */
 #explain.disappear {
     display: none;
 }
 
+
 /* letterBord - 난이도별 크기*/
 #letterBord.level9{
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     padding: 10px;
+    box-sizing: border-box;
 }
 #letterBord.level9 div{
-    font-size: 80px;
-    line-height: 1;
+    font-size: 70px;
+    line-height: 70px;
     margin: 10px;
 }
 

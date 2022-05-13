@@ -7,12 +7,12 @@ const gameData = [{
     {
         id: 2,
         answerLetter: '웃',
-        questionLetter: '윳'
+        questionLetter: '욧'
     },
     {
         id: 3,
         answerLetter: '웃',
-        questionLetter: '욧'
+        questionLetter: '윳'
     },
     {
         id: 4,
@@ -37,7 +37,7 @@ function removeAllChild($parentNode) {
 }
 
 // 10초마다 clickHere에 hint 클래스 부여하는 함수
-function clickhint (target){
+function clickhint(target) {
     const $hint = document.querySelector('.clickHere')
     $hint.classList.toggle('hint');
 }
@@ -137,7 +137,8 @@ function playgame(level) {
 }
 
 
-
+//색 변환용 클래스 배열
+const colorMode = ['silverMode', 'blackMode', 'greenMode', 'purpleMode'];
 
 //=============== 메인 코드 실행부분 ===============//
 (function () {
@@ -181,7 +182,21 @@ function playgame(level) {
         clickhint(e.target);
         setTimeout(clickhint, 100);
     })
-    
+
+    //colorBtn 클릭 이벤트 > body h1 section 에 클래스 부여
+    const $colorBtn = document.getElementById('colorBtn');
+    $colorBtn.addEventListener('click', e => {
+        // 버블링 범위 제한
+        if (e.target.matches('.silverBtn')) {
+            console.log('실버모드');
+        } else if (e.target.matches('.blackBtn')) {
+            console.log('블랙모드');
+        } else if (e.target.matches('.greenBtn')) {
+            console.log('그린모드');
+        } else if (e.target.matches('.purpleBtn')) {
+            console.log('퍼플모드');
+        }
+    })
 
 
 })() // end 전체 익명함수
