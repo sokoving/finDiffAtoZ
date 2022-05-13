@@ -117,10 +117,12 @@ section{
     align-items: center;
     text-align: center;
 }
-/* 
+
+/* 웃 마우스 커서 설정 */
 #letterBord div{
-    margin: 10px;
-} */
+    cursor: pointer;   
+}
+
 
 #startBtn{
     position: absolute;
@@ -206,4 +208,10 @@ section.sliverMode{
     font-size: 45px;
     line-height: 1;
     margin: 5px;
+}
+
+
+/* 힌트 보여주기 */
+#letterBord .clickHere.hint{
+    font-weight: 700;
 }
