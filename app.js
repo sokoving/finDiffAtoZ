@@ -1,27 +1,27 @@
 //=============== 전역변수, 함수 정의부분 =============//
 const gameData = [{
         id: 1,
-        answerLetter: 'ㅇ',
+        answerLetter: '웃',
         questionLetter: '훗'
     },
     {
         id: 2,
-        answerLetter: 'ㅇ',
+        answerLetter: '웃',
         questionLetter: '욧'
     },
     {
         id: 3,
-        answerLetter: 'ㅇ',
+        answerLetter: '웃',
         questionLetter: '윳'
     },
     {
         id: 4,
-        answerLetter: 'ㅇ',
+        answerLetter: '웃',
         questionLetter: '읏'
     },
     {
         id: 5,
-        answerLetter: 'ㅇ',
+        answerLetter: '웃',
         questionLetter: '옷'
     }
 ];
@@ -162,31 +162,28 @@ function removeAddMode(target, colorclass) {
     const $h1 = document.querySelector('header h1');
     const $section = document.querySelector('section');
 
+    //색을 변환할 노드 배열
+    const nodeArr = [$body, $h1, $section];
     //색 변환용 클래스 배열
-    const colorModes = ['sliverMode', 'blackMode', 'greenMode', 'purpleMode'];
+    const classArr = ['sliverMode', 'blackMode', 'greenMode', 'purpleMode'];
 
-    // $body일치하면 삭제
-    for (let $m of colorModes) {
-        if ($body.classList.contains($m)) {
-            $body.classList.remove($m);
+    for (let $n of nodeArr) {
+        // target에 colorclass가 있다 > 삭제 (똑같은 버튼 두 번 눌렀을 때)
+        if ($n.classList.contains(colorclass)) {
+            $n.classList.remove(colorclass);
+            // target에 colorclass가 없다면 
+        } else {
+            for (let $c of classArr) {
+                // target에 classArr의 클래스가 있으면 삭제
+                if ($n.classList.contains($c)) {
+                    $n.classList.remove($c);
+                }
+                $n.classList.add(colorclass);
+            }
         }
-        $body.classList.add(colorclass);
-    }
-    // $body일치하면 삭제
-    for (let $m of colorModes) {
-        if ($h1.classList.contains($m)) {
-            $h1.classList.remove($m)
-        }
-        $h1.classList.add(colorclass)
-    }
-    // $body일치하면 삭제
-    for (let $m of colorModes) {
-        if ($section.classList.contains($m)) {
-            $section.classList.remove($m)
-        }
-        $section.classList.add(colorclass)
     }
 }
+
 
 // body h1 section에 부여돼 있던 컬러모드 클래스 추가
 function addMode(colorMode) {
@@ -260,7 +257,6 @@ function windowReset() {
         } else if (e.target.matches('.purpleBtn')) {
             removeAddMode(e.target, 'purpleMode');
         }
-        console.log(e.target);
     })
 
 

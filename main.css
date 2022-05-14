@@ -180,82 +180,118 @@ nav {
 
 /* sliverMode */
 #colorBtn .silverBtn{
-    background: #7B8174;
-    color: #C9C9C4;
+    background: #e3e5de;
+    color: #392f31;
 }
 
 body.sliverMode{
-    background: #7B8174;
-    color: #000;
+    background: #e3e5de;
+    color: #392f31;
+    box-shadow: 2px 2px 2px #2a2a2a;
 }
 h1.sliverMode{
-    background: #C9C9C4;
+    background: #e3e5de;
+    border: 8px double #392f31;
+    color: #392f31;
+    box-shadow: 2px 2px 2px #2a2a2a;
 }
 section.sliverMode{
-    background: #C9C9C4;
+    background: #e3e5de;
+    border: 8px double #392f31;
+    box-shadow: 2px 2px 2px #2a2a2a;
 }
 section.sliverMode #gamebord{
-    background: #7B8174;
+    background: #e3e5de;    
+    color: #392f31;
 }
-
-/* 
-1 #949495
-2 #767676
-3 #7B8174
-4 #7A7C7D
-5 #AFAFB0
-6 #A99E93
-7 #CED1D3
-8 #C9C9C4z
-9 #615F62
-*/
 
 /* blackMode */
 #colorBtn .blackBtn{
-    background: #84C0DA;
-    color: #003682;
+    background: #000;
+    color: #3498DB;
 }
 
 body.blackMode{
-    background: #7B8174;
-    color: #000;
+    background: #000;
+    color: #AED6F1;
 }
+
 h1.blackMode{
-    background: #C9C9C4;
+    background: #000;
+    border: 8px double #AED6F1;
+    color: #3498DB;
 }
 section.blackMode{
-    background: #C9C9C4;
+    background: #000;
+    border: 8px double #AED6F1;
 }
 section.blackMode #gamebord{
-    background: #7B8174;
+    background: #000;    
+    color: #3498DB;
 }
-
-/* 
-1 #005EAC
-2 #6F8AA9
-3 #003682
-4 #84C0DA
-5 #D0DEEA
-6 #96B4CE
-7 
-8 
-9 
-*/
-
 
 /* greenMode */
 #colorBtn .greenBtn{
-    background: green;
-    color: yellow;
+    background: #186A3B;
+    color: #ffd700;
 }
+body.greenMode{
+    background: #186A3B;
+    color: #ffd700;
+    box-shadow: 2px 2px 2px #3d3d3d;
+}
+h1.greenMode{
+    background: #186A3B;
+    border: 8px double #ffd700;
+    color: #ffd700;
+    text-shadow: 2px 2px 2px #3d3d3d;
+    box-shadow: 2px 2px 2px #3d3d3d;
+}
+section.greenMode{
+    background: #186A3B;
+    border: 8px double #ffd700;
+    box-shadow: 2px 2px 2px #3d3d3d;
+}
+section.greenMode #gamebord{
+    background: #186A3B;    
+    color: #ffd700;
+    text-shadow: 2px 2px 2px #3d3d3d;
+}
+
 
 
 /* purpleMode */
 #colorBtn .purpleBtn{
-    background: purple;
-    color: white;
+    background: #8b00ff;
+    color: #ff00ff;
 }
-
+body.purpleMode{
+    background: #8b00ff;
+    color: #e0c0e0;
+    box-shadow: 2px 2px 2px #808080;
+}
+h1.purpleMode{
+    background: #8b00ff;
+    border: 8px double #e0c0e0;
+    color: #ff00ff;
+    text-shadow: 2px 2px 2px #808080;
+    box-shadow: 2px 2px 2px #808080;
+}
+section.purpleMode{
+    background: #8b00ff;
+    border: 8px double #e0c0e0;
+    box-shadow: 2px 2px 2px #808080;
+}
+section.purpleMode #gamebord{
+    background: #8b00ff;    
+    text-shadow: 2px 2px 2px #808080;
+}
+section.purpleMode .game-story{
+    color: #ff00ff;
+}
+section.purpleMode #letterBord{
+    color: #ff00ff;
+}
 
 
 
