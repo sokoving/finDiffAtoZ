@@ -3,11 +3,16 @@
     display: none;
 }
 
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
 
 /* wrapper */
 .wrapper {
-    /* background: pink; */
     width: 70%;
+    min-width: 1300px;
     min-width: 650px;
     font-size: 25px;
     font-family: 'NanumSquareRound', sans-serif;
@@ -21,7 +26,6 @@
 
 /*header */
 h1.titleH1{
-    /* background: orange; */
     border: 8px double #000;
     background: #fff;
 
@@ -41,48 +45,46 @@ section{
     border: 8px double #000;
     background: #fff;
 
-    padding: 50px;
+    padding: 20px 10px;
     box-sizing: border-box;
 
     display: flex;
-    flex-flow: wrap row;
+    flex-flow: row nowrap;
     justify-content: center;
 }
 
 
 /*section - colorBtn*/
 #colorBtn{
-    /* background: yellow; */
-    width: 39.99px;
-    margin: 18px 0;
+    width: 130px;
 
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-
+    flex-flow: column wrap;
+    justify-content: center;
 }
+
 #colorBtn button{
-    width: 40px;
-    height: 40px;
-    font-size: 29px;
+    width: 30px;
+    height: 30px;
+    line-height: 60px;
+    font-size: 40px;
     text-align: center;
     cursor: pointer;
 
-    margin: 7px 0;
-    border: none;
+    margin-bottom: 10px;
+    border: 6px solid;
+    box-sizing: border-box;
     border-radius: 50%;
-    /* box-shadow: 3px 3px 3px gray; */
 }
 
 
 
 /* section - gamebord */
 #gamebord { 
-    /* border: 1px solid #000; */
-    /* background: pink; */
-    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    flex: 2;
 }
-
 
 /* section - gamebord - explain */
 #explain {
@@ -122,10 +124,7 @@ section{
 
 /* section - gamebord - letterBord  */
 #letterBord{
-    /* border: 1px solid #000; */
-    /* background: pink; */
     font-size: 80px;
-    margin: 20px;
 
     display: flex;
     flex-flow: row wrap;
@@ -134,147 +133,154 @@ section{
     text-align: center;
 }
 
-/* 웃 마우스 커서 설정 */
 #letterBord div{
     cursor: pointer;   
 }
 
-
-#startBtn{
-    position: absolute;
-    left: 10%;
-}
-
-
 /* section - nav */
 nav {
-    /* border: 1px solid #000; */
-    /* background: yellow; */
     width: 130px;
-    margin: 25px 0;
-
+    
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
 }
 
 /* nav - clock */
 #clock {
-    /* background: gray; */
-    font-size: 1.3em
+    font-size: 40px;
+    display: flex;
+    flex-flow: column wrap;
+}
+#clock label{
+    font-size: 25px;
 }
 
 /* nav - checkboxBtn */
 #checkboxBtn{
-    /* background: tomato; */
-
     display: flex;
     flex-flow: column wrap;
+}
+#checkboxBtn label{
+    cursor: pointer;
 }
 
 
 /* -------------- js 적용 CSS ---------------*/
 
 /* 색 바꾸기 모드 */
-/* sliverMode blackMode greenMode purpleMode */
-
 /* sliverMode */
 #colorBtn .silverBtn{
-    background: #e3e5de;
-    color: #392f31;
+    background: #392f31;
+    color: #e3e5de;
+    text-shadow: 1px 1px 1px #3e3e3e;
 }
-
 body.sliverMode{
     background: #e3e5de;
     color: #392f31;
-    box-shadow: 2px 2px 2px #2a2a2a;
+    text-shadow: 1px 1px 1px #3e3e3e;
+    box-shadow: 2px 2px 2px #3e3e3e;
 }
 h1.sliverMode{
     background: #e3e5de;
-    border: 8px double #392f31;
+    border: 5px solid #392f31;
     color: #392f31;
-    box-shadow: 2px 2px 2px #2a2a2a;
+    text-shadow: 1px 1px 1px #3e3e3e;
 }
 section.sliverMode{
     background: #e3e5de;
-    border: 8px double #392f31;
-    box-shadow: 2px 2px 2px #2a2a2a;
+    border: 5px solid #392f31;
 }
 section.sliverMode #gamebord{
     background: #e3e5de;    
     color: #392f31;
 }
+section.sliverMode #letterBord{
+    text-shadow: 1px 1px 1px #3e3e3e;
+}
+section.sliverMode #explain .level-wrap div{
+    border: 1px dotted #392f31;
+}
+
 
 /* blackMode */
 #colorBtn .blackBtn{
-    background: #000;
-    color: #3498DB;
+    background: #3498DB;
+    color: #000;
+    text-shadow: 2px 2px 2px #0080ff;
 }
-
 body.blackMode{
     background: #000;
     color: #AED6F1;
 }
-
 h1.blackMode{
     background: #000;
-    border: 8px double #AED6F1;
+    border: 5px dotted #AED6F1;
     color: #3498DB;
 }
 section.blackMode{
     background: #000;
-    border: 8px double #AED6F1;
+    border: 5px dotted #AED6F1;
 }
 section.blackMode #gamebord{
     background: #000;    
     color: #3498DB;
+    text-shadow: 2px 2px 2px #3e3e3e;
+}
+section.blackMode #explain .level-wrap div{
+    border: 1px dotted #AED6F1;
 }
 
 /* greenMode */
 #colorBtn .greenBtn{
-    background: #186A3B;
-    color: #ffd700;
+    background: #ffd700;
+    color: #186A3B;
+    text-shadow: 2px 2px 2px #0c170f;
 }
 body.greenMode{
     background: #186A3B;
     color: #ffd700;
-    box-shadow: 2px 2px 2px #3d3d3d;
+    box-shadow: 2px 2px 2px #0c170f;
 }
 h1.greenMode{
     background: #186A3B;
     border: 8px double #ffd700;
     color: #ffd700;
-    text-shadow: 2px 2px 2px #3d3d3d;
-    box-shadow: 2px 2px 2px #3d3d3d;
+    text-shadow: 2px 2px 2px #0c170f;
+    box-shadow: 2px 2px 2px #0c170f;
 }
 section.greenMode{
     background: #186A3B;
     border: 8px double #ffd700;
-    box-shadow: 2px 2px 2px #3d3d3d;
+    box-shadow: 2px 2px 2px #0c170f;
 }
 section.greenMode #gamebord{
     background: #186A3B;    
     color: #ffd700;
-    text-shadow: 2px 2px 2px #3d3d3d;
+    text-shadow: 2px 2px 2px #0c170f;
+}
+section.greenMode #explain .level-wrap div{
+    border: 1px dotted #ffd700;
 }
 
 
 
 /* purpleMode */
 #colorBtn .purpleBtn{
-    background: #8b00ff;
-    color: #ff00ff;
+    background: #ff00ff;
+    color: #8b00ff;
+    text-shadow: 2px 2px 2px #0080ff;
 }
 body.purpleMode{
     background: #8b00ff;
     color: #e0c0e0;
-    box-shadow: 2px 2px 2px #808080;
+    box-shadow: 2px 2px 2px #0080ff;
 }
 h1.purpleMode{
     background: #8b00ff;
     border: 8px double #e0c0e0;
     color: #ff00ff;
-    text-shadow: 2px 2px 2px #808080;
+    text-shadow: 2px 2px 2px #0080ff;
     box-shadow: 2px 2px 2px #808080;
 }
 section.purpleMode{
@@ -288,12 +294,15 @@ section.purpleMode #gamebord{
 }
 section.purpleMode .game-story{
     color: #ff00ff;
+    text-shadow: 2px 2px 2px #0080ff;
 }
 section.purpleMode #letterBord{
     color: #ff00ff;
+    text-shadow: 2px 2px 3px #0080ff;
 }
-
-
+section.purpleMode #explain .level-wrap div{
+    border: 1px dotted #ff00ff;
+}
 
 
 /* explain 사라지기 */
@@ -310,9 +319,8 @@ section.purpleMode #letterBord{
     box-sizing: border-box;
 }
 #letterBord.level9 div{
-    font-size: 70px;
-    line-height: 70px;
-    margin: 10px;
+    font-size: 80px;
+    margin: 0 10px;
 }
 
 #letterBord.level49{
@@ -322,7 +330,6 @@ section.purpleMode #letterBord{
 }
 #letterBord.level49 div{
     font-size: 50px;
-    line-height: 1;
     margin: 8px;
 }
 
@@ -333,7 +340,6 @@ section.purpleMode #letterBord{
 }
 #letterBord.level100 div{
     font-size: 45px;
-    line-height: 1;
     margin: 5px;
 }
 
@@ -349,6 +355,7 @@ section.purpleMode #letterBord{
 #answerLetter {
     display: none;
     width: 350px;
+    height: 350px;
     position: relative;
     font-size: 1.5em;
 }

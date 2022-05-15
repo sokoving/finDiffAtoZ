@@ -114,21 +114,30 @@ function playgame(level) {
             // 5번째의 판이 끝이 났을때 판 지우기
             if (idx === 5) {
                 removeAllChild($letterBord);
-                alert('1~5판 종료');
                 // 다음 난이도 도전 알람 이후 다음 난이도 열기
                 if (level === 9) {
-                    if (confirm('중 난이도에 도전하시겠습니까?')) {
+                    if (confirm('초급 클리어!\n중급에 도전하시겠습니까?')) {
                         idx = 1;
                         $letterBord.classList.replace('level9', 'level49')
                         level = 49;
                         playgame(level);
+                    } else {
+                        const $answerLetter = document.getElementById('answerLetter')
+                        $answerLetter.classList.add('finished')
+                        $letterBord.style.display = 'none';
+                        answerLetterClass();
                     }
                 } else if (level === 49) {
-                    if (confirm('상 난이도에 도전하시겠습니까?')) {
+                    if (confirm('중급 클리어!\n상급에 도전하시겠습니까?')) {
                         idx = 1;
                         $letterBord.classList.replace('level49', 'level100')
                         level = 100;
                         playgame(level);
+                    } else {
+                        const $answerLetter = document.getElementById('answerLetter')
+                        $answerLetter.classList.add('finished')
+                        $letterBord.style.display = 'none';
+                        answerLetterClass();
                     }
                 } else if (level === 100) {
                     alert('게임 클리어!')
