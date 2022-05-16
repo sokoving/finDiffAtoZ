@@ -73,6 +73,48 @@ function gameBord(maxNum, idxNum) {
     // console.log('-------');
 }
 
+// 타이머 작동 시키는 함수
+let tim = null; // setInterval 들어갈 변수
+function timer() {
+
+    let min = 0;
+    let sec = 0;
+    let time = 0;
+
+    tim = setInterval(function () {
+        const $clock = document.getElementById("clock");
+        time++
+
+        sec = Math.floor(time / 60);
+        min = Math.floor(sec / 60);
+        milsec = time % 100;
+        sec = sec % 100;
+
+        // console.log(sec);
+        // console.log(min);
+
+        var tm = min;
+        var ts = sec;
+        var tms = milsec;
+        if (tm < 10) {
+            tm = "0" + min;
+        }
+        if (ts < 10) {
+            ts = "0" + sec;
+        }
+        if (tms < 10) {
+            tms = "0" + milsec;
+        }
+
+        $clock.innerHTML = tm + ":" + ts + ":" + tms;
+    }, 10);
+
+
+}
+
+
+
+
 // 게임판 level개의 숫자로 만들기
 function playgame(level) {
     // 몇번째 판인지 구별하는 함수
@@ -126,6 +168,9 @@ function playgame(level) {
                         $answerLetter.classList.add('finished')
                         $letterBord.style.display = 'none';
                         answerLetterClass();
+
+                        clearInterval(tim);
+                        tim = null;
                     }
                 } else if (level === 49) {
                     if (confirm('중급 클리어!\n상급에 도전하시겠습니까?')) {
@@ -138,6 +183,9 @@ function playgame(level) {
                         $answerLetter.classList.add('finished')
                         $letterBord.style.display = 'none';
                         answerLetterClass();
+
+                        clearInterval(tim);
+                        tim = null;
                     }
                 } else if (level === 100) {
                     alert('게임 클리어!')
@@ -146,6 +194,9 @@ function playgame(level) {
                     $answerLetter.classList.add('finished')
                     $letterBord.style.display = 'none';
                     answerLetterClass();
+
+                    clearInterval(tim);
+                    tim = null;
                 }
 
                 return;
@@ -240,6 +291,9 @@ function windowReset() {
         } else {
             return;
         }
+
+        // 난의도 선택 후 시작하고 클리어했을때 멈추는 타이머
+        timer();
     })
 
     //힌트 버튼을 클릭하면 정답이 굵어졌다 돌아가는 이벤트
@@ -275,5 +329,7 @@ function windowReset() {
         windowReset();
         console.log(e.target);
     })
+
+
 
 })() // end 전체 익명함수

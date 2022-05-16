@@ -26,16 +26,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<body class="sliverMode">
+<body class="">
 
     <!-- 전제 래핑 -->
     <div class="wrapper">
         <header>
-            <h1 class="titleH1 sliverMode"><span>웃!</span> 여기 있다!</h1>
+            <h1 class="titleH1"><span>웃!</span> 여기 있다!</h1>
         </header>
 
         <!-- 게임 메인 화면 -->
-        <section class="sliverMode">
+        <section class="">
             <!-- 옵션 1: 버튼을 누르면 배경색과 글씨가 바뀐다 -->
             <div id="colorBtn">
                 <!-- 배경: 흰 글씨: 검 -->
@@ -84,26 +84,30 @@
 
                 <!-- 게임 클리어 후 나올 화면 -->
                 <div id="answerLetter">
-                    <div class="first">웃</div>
+                    <div class="first">와, 신난다!<br>다 같이 놀자~ <span>웃</span></div>
                     <div class="second">훗</div>
                     <div class="third">욧</div>
                     <div class="force">윳</div>
                     <div class="fifth">읏</div>
                     <div class="sixth">옷</div>
-                    <span>와, 신난다!<br>다 같이 놀자~</span>
+                    
                 </div>
             </div>
 
             <nav>
                 <!-- 타이머 : 단계를 완료할 때까지 시간을 잰다-->
-                <div id="clock">
-                    <span>00:00</span>
-                    <!-- 옵션 2: 체크하면 타이머가 보인다 -->
-                    <label class="checkbox lnrplus">
-                        <span class="lnr lnr-plus-circle"></span>
-                        <span class="text">타이머</span>
-                    </label>
+                <div id="clockWrap">
+                    <div id="clock">00:00:00</div>
                 </div>
+
+                <!-- li에 타이머 복사, 힌트 사용 카우트  -->
+                <!-- <div id="result">
+                    <ul>
+                        <li></li>
+                    </ul>
+                    <div id="hint">힌트 사용: <span></span>회</div>
+                </div> -->
+
                 <div id="checkboxBtn">
                     <!-- 옵션 3: 체크하면 9초쯤에 글씨가 굵어진다 -->
                     <label class="checkbox lnrmagnifie">
